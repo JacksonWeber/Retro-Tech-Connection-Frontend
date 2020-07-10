@@ -15,13 +15,13 @@
 <div class="d-flex flex-column parent-container">
   <header class="header-global">
     <nav id="navbar-main" class="navbar">
-      <a class="navbar-brand" href="./home">
+      <a class="navbar-brand" href="/homepage">
         <div class="win-95-inner-border"> <i data-feather="grid"></i> RTC</div>
       </a>
 
       <ul class="d-flex justify-content-between">
         <li class="nav-item active">
-          <a class="nav-link" href="./home"><i data-feather="home"></i>Home</a>
+          <a class="nav-link" href="/homepage"><i data-feather="home"></i>Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./account"><i data-feather="user"></i>My Profile</a>
@@ -70,9 +70,11 @@
         <div id="software-homepage" class="col-md-6">
           <div class="card  mt-5">
             <div class="card-body">
-              <h5 class="card-title"><i data-feather="save"></i> Popular Software</h5>
+              <h5 class="card-title"><i data-feather="save"></i>Popular Software</h5>
               <div id="homepage-software-list" class="list-group">
-                <img src="https://i1.wp.com/jasonfarman.com/delayedresponse/wp-content/uploads/2017/06/hour-glass.gif">
+                <div *ngFor="let softwareItem of software">
+                  <span>{{ softwareItem.name }}</span>
+                </div>
               </div>
             </div>
           </div>
